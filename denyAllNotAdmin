@@ -1,0 +1,21 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "*",
+            "Resource": "*",
+            "Condition": {
+                "StringNotEquals": {
+                    "aws:userId": [
+                        "IAM_USER_ARN_1",
+                        "IAM_USER_ARN_2",
+                        "IAM_USER_ARN_3"
+                    ],
+                    "aws:groups": "admin"
+                }
+            }
+        }
+    ]
+}
